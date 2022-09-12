@@ -72,7 +72,7 @@ async def serverinfo(ctx):
     await ctx.send(embed=embed)
 
 
-# from carberra turtorials youtube
+# ^from carberra turtorials youtube
 
 @bot.command()
 async def rps(ctx, choice=None):
@@ -715,7 +715,7 @@ async def ver(ctx):
     role = discord.utils.get(ctx.guild.roles, name="unverified")
     valid_reactions = ["🇦","🇧","🇨","🇩","🇪"]
     verified=random.choice(valid_reactions)
-    if ctx.message.channel.id == 975176691741761546 and role in ctx.author.roles:
+    if ctx.message.channel.id == 975176691741761546 and role in ctx.author.roles: #the channel id is the verification channel
         verificationembed=discord.Embed(title="Are you a bot?", description=f"React to this message with the letter {verified}")
         verificationembed.set_footer(text="Verification will timeout after 30 seconds")
         message=await ctx.send(embed=verificationembed)
